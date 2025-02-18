@@ -1,0 +1,21 @@
+#começando o projeto
+npm init -y
+
+npm i fastify
+
+npm i tsx typescript @types/node -D
+
+npx tsc --init
+
+npm i @fastify/cors
+
+#lib de validador
+npm i zod
+
+# integração com o validador do zod para o fastify
+npm i fastify-type-provider-zod
+
+# interface para visualizar as rotas
+npm i @fastify/swagger @fastify/swagger-ui
+
+npm i @biomejs/biome -D
