@@ -19,3 +19,24 @@ npm i fastify-type-provider-zod
 npm i @fastify/swagger @fastify/swagger-ui
 
 npm i @biomejs/biome -D
+
+npm i ioredis
+
+npm i postgres drizzle-orm
+npm i drizzle-kit -D
+
+#drizzle.config.ts
+import type { Config } from 'drizzle-kit'
+import { env } from './src/env'
+
+export default {
+  schema: './src/drizzle/schema/*',
+  out: './src/drizzle/migrations',
+  dbCredentials: {
+    url: env.POSTGRES_URL,
+  },
+  dialect: 'postgresql',
+} satisfies Config
+
+
+npx drizzle-kit generate
